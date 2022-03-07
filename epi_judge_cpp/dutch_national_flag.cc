@@ -18,16 +18,16 @@ void DutchFlagPartition(int pivot_index, vector<Color>* A_ptr) {
 		if (A[k] <= x) {
 			j++;
 			std::swap(A[k], A[j]);
-			if (A[k] < x) {
+			if (A[j] < x) {
 				i++;
 				std::swap(A[j], A[i]);
 			}
 		}
 	}
-	printf("\n------%d--------\n", x);
-	for (auto v : A)
-		printf("%d , ", v);
-	printf("\n--------------\n");
+	//printf("\n------%d--------\n", x);
+	//for (auto v : A)
+	//	printf("%d , ", v);
+	//printf("\n--------------\n");
 
   return;
 }
