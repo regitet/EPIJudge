@@ -4,7 +4,15 @@
 using std::vector;
 vector<int> PlusOne(vector<int> A) {
   // TODO - you fill in here.
-  return {};
+	int carry = 1;
+	for (int i=A.size()-1; i>=0; i--) {
+		int sum = carry + A[i];
+		A[i]	= sum % 10;
+		carry	= sum / 10;
+	}
+	if (carry != 0)
+		A.insert(A.begin(), carry);
+	return A;
 }
 
 int main(int argc, char* argv[]) {
